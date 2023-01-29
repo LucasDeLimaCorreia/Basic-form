@@ -1,0 +1,81 @@
+body
+{
+ background-color: #260628;
+ color: white;
+ display: flex;
+ flex-direction: row;
+ flex-wrap: wrap;
+ font-family: Arial, Helvetica, sans-serif;
+}
+main /*Envolve todos os elementos*/
+{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+/*===============================================================================ESQUERDA========================================================================================*/
+.divForm /*Div que envolve o formulário de cadastro*/
+{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin-top: 100px;
+    width:580px;
+    padding: 20px;
+    background-color: #4d1953;
+    box-shadow: 2px 5px 15px 10px rgba(255, 255, 255, 0.404);
+}
+.divForm h1 /*Título da div que envolve o formulário de cadastro*/
+{
+    text-align: center;
+}
+#formRegister /*Formulário de cadastro*/
+{
+    width:270px;
+}
+#formRegister input /*Todos os inputs do formulário de cadastro*/
+{
+    float: right;
+    background-color: #4d1953;
+    border:rgba(255, 255, 255, 0.603) 1px solid;
+    color:white;
+}
+#btn /*Botão cadastrar/atualizar*/
+{
+    float: none !important;
+    display: flex;
+    margin: 0px auto;
+    width: 80px;
+    height: 40px;
+    cursor: pointer;
+    justify-content: center;
+}
+#btn:hover /*Ao passar o mouse em cima do botão cadastrar/atualizar*/
+{
+    color:#4d1953;
+    background-color: white;
+}
+
+/*===============================================================================DIREITA========================================================================================*/
+
+.divRecords /*Tabela com os registros*/
+{
+    width: 660px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin-top: 100px;
+    padding: 20px;
+    background-color: #4d1953;
+    box-shadow: 2px 5px 15px 10px rgba(255, 255, 255, 0.404);
+}
+.divRecords h1 /*Título da tabela com os registros*/
+{
+    text-align: center;
+}
+.formError /*Span de erro de aviso de preenchimento incorreto dos inputs*/
+{
+    color:red;
+}

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pdo</title>
+    <link href="home.css" rel="stylesheet" type="text/CSS">
+</head>
+<body onLoad="initialLoad()">
+    <main>
+        <div class="divForm">
+            <h1 id="titleForm">Cadastro</h1>
+            <form id="formRegister" onSubmit="event.preventDefault()">
+                <label for="inputName">Nome</label> <input type="text" data-errorSpan="spanNameError" id="inputName" placeholder="Digite o nome" onkeyup="check(this,event)" onblur="checkFullInput(this)" onpaste="checkFilledInput(this)"> <br />
+                <span class="formError" id="spanNameError"></span> <br />
+                <label for="inputEmail">Email</label> <input type="email" data-errorSpan="spanEmailError" id="inputEmail" placeholder="Digite o email" onkeyup="check(this,event)" onblur="checkFullInput(this)" onpaste="checkFilledInput(this)"> <br />
+                <span class="formError" id="spanEmailError"></span> <br />
+                <label for="inputPhone">Telefone</label> <input type="text" id="inputPhone" maxlength="15" minlength="14" data-errorSpan="spanPhoneError" placeholder="(00) 00000-0000" onkeyup="check(this,event)" onblur="checkFullInput(this)" onpaste="checkFilledInput(this)"> <br />
+                <span class="formError" id="spanPhoneError"></span> <br />
+                <input type="button" value="Cadastrar" name="register" id="btn" onClick="commands(this.name),''">
+            </form>
+        </div>
+
+        <div class="divRecords" id="records">
+            <h1 id="titleRecords">Usuários cadastrados</h1>
+            <table id="tbRecords">
+                <tr> <th>Nome</th> <th>Telefone</th> <th colspan="2">Email</th> </tr>
+                
+            </table>
+        </div>
+    </main>
+    <script src="home.js"></script>
+</body>
+</html>
